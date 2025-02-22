@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #870000;
+    padding: 40px 60px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.9em;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000; 
+    color: black; 
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #b13e3e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('/images/up_bg.webp') no-repeat center center/cover;
+    transition: background-image 1s ease-in-out;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+.hero-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.hero-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.hero-content button {
+    background: white;
+    color: #870000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero-content button:hover {
+    background: #ddd;
+}
+
+
+.section {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #870000;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 10px;
+    color: #333;
+}
+
+.card button {
+    background: #870000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.card button:hover {
+    background: #a00000;
+}
+
+.see-more {
+    background: #870000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.see-more:hover {
+    background: #a00000;
+}
+
+.section {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #870000;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.events-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+
+.event-card img {
+    width: 150px;
+    height: auto;
+}
+
+.event-date {
+    background: #870000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 70px;
+}
+
+.event-content {
+    padding: 10px;
+    flex: 1;
+}
+
+.voices-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.voice-column {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.voice-column h3 {
+    font-size: 1.2em;
+    color: #870000;
+    margin-bottom: 10px;
+}
+
+.voice-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.voice-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.see-more {
+    background: #870000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.see-more:hover {
+    background: #870000;
+}
+
+.footer {
+    background-color: #870000;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section address {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-privacy {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+}
+
+.footer-privacy label {
+    cursor: pointer;
+}
