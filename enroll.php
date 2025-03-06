@@ -76,6 +76,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
     <div class="form-container">
+        <div class="form-back-button">
+            <button type="button" class="back-arrow" onclick="window.location.href='index.php'">
+                ← Back
+            </button>
+        </div>
         <div class="form-header">
             <img src="/images/up_logo.png" alt="UP Logo" class="logo">
             <h1>University of the Philippines</h1>
@@ -85,41 +90,87 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="form-section">
                 <h3>Applicant Information</h3>
                 <div class="form-group">
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="middle_name" placeholder="Middle Name (Optional)">
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                    <input type="text" name="suffix" placeholder="Suffix (Optional)">
-                    <input type="date" name="birthdate" required>
-                    <input type="text" name="nationality" placeholder="Nationality" required>
+                    <div>
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    <div>
+                        <label for="middle_name">Middle Name (Optional)</label>
+                        <input type="text" id="middle_name" name="middle_name" placeholder="Enter your middle name">
+                    </div>
+                    <div>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+                    </div>
+                    <div>
+                        <label for="suffix">Suffix (Optional)</label>
+                        <input type="text" id="suffix" name="suffix" placeholder="Enter your suffix">
+                    </div>
+                    <div>
+                        <label for="birthdate">Birthdate</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                        <small class="helper-text">Please enter your birthdate (MM/DD/YYYY).</small>
+                    </div>
+                    <div>
+                        <label for="nationality">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" required>
+                    </div>
                 </div>
             </div>
             <div class="form-section">
                 <h3>Other Information</h3>
                 <div class="form-group">
-                    <input type="text" name="guardian_name" placeholder="Guardian Full Name" required>
-                    <input type="text" name="occupation" placeholder="Occupation">
-                    <input type="text" name="guardian_nationality" placeholder="Nationality">
-                    <input type="text" name="guardian_contact" placeholder="Contact Number">
+                    <div>
+                        <label for="guardian_name">Guardian Full Name</label>
+                        <input type="text" id="guardian_name" name="guardian_name" placeholder="Enter guardian's full name" required>
+                    </div>
+                    <div>
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" name="occupation" placeholder="Enter guardian's occupation">
+                    </div>
+                    <div>
+                        <label for="guardian_nationality">Guardian's Nationality</label>
+                        <input type="text" id="guardian_nationality" name="guardian_nationality" placeholder="Enter guardian's nationality">
+                    </div>
+                    <div>
+                        <label for="guardian_contact">Guardian's Contact Number</label>
+                        <input type="text" id="guardian_contact" name="guardian_contact" placeholder="Enter guardian's contact number">
+                    </div>
                 </div>
             </div>
             <div class="form-section">
                 <h3>Contact Information</h3>
                 <div class="form-group">
-                    <input type="text" name="address" placeholder="Address" required>
-                    <select name="strand" required>
-                        <option value="" disabled selected>Select Strand</option>
-                        <option value="STEM">STEM</option>
-                        <option value="ABM">ABM</option>
-                        <option value="HUMSS">HUMSS</option>
-                    </select>
-                    <input type="text" name="contact_number" placeholder="Contact Number" required>
-                    <select name="preferred_course" required>
-                        <option value="" disabled selected>Preferred Course</option>
-                        <option value="BS Computer Science">BS Computer Science</option>
-                        <option value="BS Biology">BS Biology</option>
-                        <option value="BS Mathematics">BS Mathematics</option>
-                    </select>
-                    <input type="email" name="email_address" placeholder="Email Address" required>
+                    <div>
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                    </div>
+                    <div>
+                        <label for="strand">Select Strand</label>
+                        <select id="strand" name="strand" required>
+                            <option value="" disabled selected>Select Strand</option>
+                            <option value="STEM">STEM</option>
+                            <option value="ABM">ABM</option>
+                            <option value="HUMSS">HUMSS</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="contact_number">Contact Number</label>
+                        <input type="text" id="contact_number" name="contact_number" placeholder="Enter your contact number" required>
+                    </div>
+                    <div>
+                        <label for="preferred_course">Preferred Course</label>
+                        <select id="preferred_course" name="preferred_course" required>
+                            <option value="" disabled selected>Select Preferred Course</option>
+                            <option value="BS Computer Science">BS Computer Science</option>
+                            <option value="BS Biology">BS Biology</option>
+                            <option value="BS Mathematics">BS Mathematics</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email_address">Email Address</label>
+                        <input type="email" id="email_address" name="email_address" placeholder="Enter your email address" required>
+                    </div>
                 </div>
             </div>
             <div class="form-submit">
@@ -129,8 +180,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
     <script>
         function confirmSubmission() {
-            const confirmation = confirm("Are you sure all the data you have entered is correct?");
-            return confirmation;
+            return confirm("Are you sure all the data you have entered is correct?");
         }
     </script>
 </body>

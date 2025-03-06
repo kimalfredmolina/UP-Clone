@@ -53,14 +53,26 @@ h3 {
 .form-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+}
+
+.form-group div {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #003865;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"],
 select {
-    flex: 1 1 45%;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -75,6 +87,11 @@ select:focus {
     border-color: #0073e6;
     outline: none;
     box-shadow: 0 0 3px rgba(0, 115, 230, 0.5);
+}
+
+.helper-text {
+    font-size: 12px;
+    color: #888;
 }
 
 button.submit-button {
@@ -100,10 +117,25 @@ button.submit-button:hover {
         flex-direction: column;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="date"],
-    select {
+    .form-group div {
         flex: 1 1 100%;
     }
+}
+
+.form-back-button {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.back-arrow {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.back-arrow:hover {
+    background-color: #ddd;
 }
