@@ -38,6 +38,7 @@
                     <a href="#">Frequently Asked Questions</a>
                 </div>
             </div>
+            <a href="/enroll.php">Enroll Now!</a>
             <a href="#">Academics and Research</a>
             <a href="#">Public Service</a>
             <a href="#">Alumni</a>
