@@ -81,12 +81,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 ← Back
             </button>
         </div>
+
         <div class="form-header">
             <img src="/images/up_logo.png" alt="UP Logo" class="logo">
             <h1>University of the Philippines</h1>
             <h2>Student Enrollment Form</h2>
         </div>
-        <form id="enrollmentForm" method="POST" action="enroll.php" onsubmit="return confirmSubmission()">
+
+        <div id="popupWarning" class="popup-warning" style="display: none;">
+            <div class="popup-content">
+                <p id="popupMessage"></p>
+                <button id="confirmButton">Confirm</button>
+                <button id="dismissButton" onclick="hidePopup()">Dismiss</button>
+            </div>
+        </div>
+
+        <form id="enrollmentForm" method="POST" action="enroll.php" onsubmit="confirmSubmission(event)">
             <div class="form-section">
                 <h3>Applicant Information</h3>
                 <div class="form-group">
@@ -178,11 +188,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
         </form>
     </div>
-    <script>
-        function confirmSubmission() {
-            return confirm("Are you sure all the data you have entered is correct?");
-        }
-    </script>
+    <script src="/enroll.js"></script>
 </body>
 
 </html>
