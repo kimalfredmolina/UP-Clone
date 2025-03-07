@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "@kimalfred22";
+$password = ""; //@kimalfred22
 $dbname = "enrollment_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -176,6 +176,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             <option value="BS Computer Science">BS Computer Science</option>
                             <option value="BS Biology">BS Biology</option>
                             <option value="BS Mathematics">BS Mathematics</option>
+                            <option value="BS Information Technology">BS Information Technology</option>
+                            <option value="BS Chemistry">BS Chemistry</option>
+                            <option value="BS Physics">BS Physics</option>
+                            <option value="BS Accountancy">BS Accountancy</option>
+                            <option value="BS Psychology">BS Psychology</option>
+                            <option value="BS Nursing">BS Nursing</option>
+                            <option value="BS Civil Engineering">BS Civil Engineering</option>
+                            <option value="BS Electrical Engineering">BS Electrical Engineering</option>
+                            <option value="BS Mechanical Engineering">BS Mechanical Engineering</option>
+                            <option value="BS Architecture">BS Architecture</option>
+                            <option value="BS Business Administration">BS Business Administration</option>
+                            <option value="BS Tourism Management">BS Tourism Management</option>
+                            <option value="BS Hotel and Restaurant Management">BS Hotel and Restaurant Management</option>
+                            <option value="BS Criminology">BS Criminology</option>
+                            <option value="BS Education">BS Education</option>
+                            <option value="BS Fine Arts">BS Fine Arts</option>
                         </select>
                     </div>
                     <div>
